@@ -265,6 +265,18 @@ label{
     padding: 2rem;
     border:2px solid rgb(181, 79, 232);
 }
+#tarjeta{
+    width: 100%!important;
+}
+#mes{
+    width: 100%!important;
+}
+#ano{
+    width: 100%!important;
+}
+#cuotas{
+    width: 100%!important;
+}
 
 footer {
     background-color: #333;
