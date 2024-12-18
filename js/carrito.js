@@ -363,6 +363,7 @@ function checkout() {
     if (Object.keys(carrito).length > 0) {
         showAlert("Vamos direccionar para un formulario para que completes y efectúe la compra!")
         mostrarFormulario();
+        closeCarrito();
     } else {
         showAlert("Tu carrito está vacío")
     }
