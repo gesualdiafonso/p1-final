@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Função para calcular o total
+// Funcion para calcular el total
 function calcularTotal() {
     let total = 0;
     // Aqui você pode usar seu array de "carrito" para calcular o total
@@ -173,17 +173,17 @@ function calcularTotal() {
     return total;
 }
 
-// Função para atualizar o valor total a pagar
+// Funcion para actualizar el valor total a pagar 
 function atualizarTotalPagar() {
     const totalPagarElement = document.getElementById("totalPagar");
     if (totalPagarElement) {
         const total = calcularTotal();
-        // Atualizando o conteúdo do span com o valor total
+        // Actualizado para el contenido del span con el valor total
         totalPagarElement.textContent = `U$${total.toFixed(2)}`; // Formato monetário
     }
 }
 
-// Função para calcular o total
+// funion para calcular el total
 function calcularTotal() {
     let total = 0;
     // Aqui você pode usar seu array de "carrito" para calcular o total
@@ -195,7 +195,7 @@ function calcularTotal() {
     return total;
 }
 
-// Função para atualizar o valor total a pagar
+// Función para actualizar el importe total a pagar
 function atualizarTotalPagar() {
     const totalPagarElement = document.getElementById("totalPagar");
     if (totalPagarElement) {
@@ -205,7 +205,7 @@ function atualizarTotalPagar() {
     }
 }
 
-// Função para exibir as parcelas
+// Función de visualización de los plazos
 function exibirParcelas() {
     const total = calcularTotal();
     const cuotasSelect = document.getElementById("cuotas");
@@ -218,7 +218,7 @@ function exibirParcelas() {
         cuotasDetalhe.removeChild(cuotasDetalhe.firstChild);
     }
 
-    // Verifica se o tipo de tarjeta é "Crédito" e se foi selecionada uma quantidade de cuotas
+    // Comprueba que el tipo de ticket es «Crédito» y que se ha seleccionado un número de cuotas.
     if (tarjetaValue === "2" && cuotasValue !== "0") {
         let numCuotas;
         switch (cuotasValue) {
@@ -237,7 +237,7 @@ function exibirParcelas() {
 
         const cuotaValor = total / numCuotas;
 
-        // Criando elementos de texto para exibir as informações sobre as parcelas
+        // Creación de elementos de texto para mostrar información sobre la parcela
         const cuotasText = document.createElement("p");
         cuotasText.textContent = `La cantidad de cuotas seleccionada es: ${numCuotas} cuota(s).`;
         cuotasDetalhe.appendChild(cuotasText);
@@ -254,15 +254,15 @@ function exibirParcelas() {
     }
 }
 
-// Função para atualizar tanto o total quanto as parcelas
+// Función para actualizar tanto el total como los plazos
 function atualizarValores() {
     atualizarTotalPagar();
     exibirParcelas();
 }
 
-// Adicionando os ouvintes de eventos para os selects
+// Añadir escuchadores de eventos a los selects
 document.getElementById("tarjeta").addEventListener("change", atualizarValores);
 document.getElementById("cuotas").addEventListener("change", atualizarValores);
 
-// Inicializando os valores
+// Inicializando los valores
 atualizarValores();

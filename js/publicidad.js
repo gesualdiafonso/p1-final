@@ -1,4 +1,4 @@
-// Dados das imagens e IDs associados
+// Dados de las imagens e IDs asociados
 const banners = {
     vr: { src: 'assets/banners/banner_rvp.jpg', id: 10 },
     ar: { src: 'assets/banners/banner_RAP-1.jpg', id: 3 },
@@ -7,13 +7,13 @@ const banners = {
 
 let timeoutId = null;
 
-// Função para obter uma categoria aleatória
+// Funcion para obtener una categoria aleatoria
 function getRandomCategory() {
     const keys = Object.keys(banners);
     return keys[Math.floor(Math.random() * keys.length)];
 }
 
-// Função para exibir o banner
+// Funcion para exibir el banner
 function showBanner(category) {
     const publicidadDiv = document.getElementById('publicidad');
 
@@ -26,10 +26,10 @@ function showBanner(category) {
         return;
     }
 
-    // Obter o banner e o ID associado
+    // Obtener el banner y el ID asociado
     const banner = banners[category];
 
-    // Criar elementos DOM para o banner
+    // Crear elementos DOM para el banner
     const bannerLink = document.createElement('a');
     bannerLink.href = '#'; // Não navegar para lugar algum
     bannerLink.target = '_blank';
@@ -43,19 +43,19 @@ function showBanner(category) {
     bannerLink.appendChild(bannerImage);
     publicidadDiv.appendChild(bannerLink);
 
-    // Adicionar evento de clique para abrir o modal com o ID associado
+    // Añadir evento click para abrir el modal con el ID asociado
     bannerLink.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevenir a navegação padrão
-        openModal(banner.id); // Chamar a função openModal com o ID do banner
+        event.preventDefault(); // Evitar la navegación por defecto
+        openModal(banner.id); // Llama a la función openModal con el ID del banner
     });
 
-    // Configurar o timeout para remover o banner após 10 segundos
+    // Establecer el tiempo de espera para eliminar el banner después de 10 segundos
     timeoutId = setTimeout(() => {
         publicidadDiv.innerHTML = '';
     }, 10000);
 }
 
-// Função para aplicar filtros e exibir o banner
+// Función para aplicar filtros y mostrar la pancarta
 function aplicarFiltros() {
     const categoriaSeleccionada = categoriaSelect.value || 'all';
     const precioSeleccionado = preciosSelect.value || null;
