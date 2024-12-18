@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="faviconfg.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <title>Futuristic Glasses</title>
+</head>
+<body>
+
+    <header class="d-flex justify-content-center">
+        <!--NavBar-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+            <a class="navbar-brand p-4" href="index.html">Spectra Lab</a>
+            <button class="navbar-toggler text-bg-dark" 
+                    type="button" data-bs-toggle="offcanvas" 
+                    data-bs-target="#offcanvasNavbar" 
+                    aria-controls="offcanvasNavbar" 
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!--SideBar-->
+            <div class="siderbar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                
+                <!--Sidebar Header-->
+                
+                <div class="offcanvas-header text-white border-bottom">
+                <h1 class="offcanvas-title p-lg-5" id="offcanvasNavbarLabel">Spectra Lab</h1>
+                <button type="button" class="btn-close  btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <!--Sidebarbody-->
+
+                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0 text-white">
+                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                        <li class="nav-item">
+                        <a class="nav-link mx-2" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link mx-2" href="index.html#about">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link mx-2" href="index.html#beneficios">Beneficios</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link mx-2" href="index.html#contac">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mx-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#vr">Realidad Virtual</a></li>
+                            <li><a class="dropdown-item text-black" href="#ar">Realidad Aumentada</a></li>
+                            <li><a class="dropdown-item text-black" href="#mr">Realidad Mista</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <!--Carrito-->
+                    <div class="d-flex justify-content-center aling-items-center flex-column flex-lg-row">
+                        <button type="button" class="btn btn-primary mt-lg-3 mx-auto carrito"><i class="bi bi-cart4" style="font-size: 24px; color: white;"></i></button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+        </header>
+        <!--Fin de Header-->
+
+        <!--PRODUCTOS-->
+
+    <main class="w-auto h-auto d-block">
+
+        <!--Hero PRODUCTOS-->
+        <section class="w-100 hero">
+            
+            <div class="parallax-hero">
+                <div class="parallax-layer layer1"></div>
+                <div class="parallax-layer layer2"></div>
+                <div class="parallax-layer layer3"></div>
+                <div class="parallax-layer layer4"></div>
+                <div class="parallax-layer layer5"></div>
+            </div>
+            <div class="hero-text container ps-5 w-100">
+                <h2 class="text-white fs-1 w-50">¡Empiece ahora <br> una nueva <span>Realidad!!</span></h2>
+                <p class="text-white fs-4">Explore nuestra sección de produtos de <a href="#vr">Realidad Virtual</a>, <a href="#ar">Realidad Aumentada</a>, <a href="#mr">Realidad Mixta</a></p>
+            </div>
+
+        </section>
+    
+        
+    </main>
+    <!--FIM DE HERO PRODUCTOS-->
+    <!--Productos-->
+    <section id="mr" class="w-100 h-auto mb-5">
+        <!-- Catalogo -->
+        <div id="publicidad" class="container w-100 mx-auto my-5 publicidades"></div>
+        <div  class="mx-auto my-5 h-100">
+            <div class="position-txt-2 my-5 text-center">
+                <div class="boder-decor-MR"></div>
+                <select name="categoria" id="categoria" class="form-select">
+                    <option selected value="" disabled>Por Categorias</option>
+                    <option value="vr">Realidad Virtual</option>
+                    <option value="ar">Realidad Aumentada</option>
+                    <option value="mr">Realidad Mixta</option>
+                    <option value="all">Mostrar todos</option>
+                </select>
+                <select name="precios" id="precios" class="form-select">
+                    <option selected value="" disabled>Por Precio</option>
+                    <option value="maxValor">Mayor Precio</option>
+                    <option value="minValor">Menor Precio</option>
+                    <option value="clear">Mostrar todos</option>
+                </select>
+                <div class="boder-decor-MR"></div>
+            </div>
+            <div class="container mx-auto px-5">
+                <div class="row g-5 card-contein" id="catalogo">
+                    <!--Conteudo do card dentro do JS-->
+                </div>
+            </div>
+    </section>
+
+    <section  class="form row justify-content-center estilo_form">
+        <div id="form-visibility" class="formulario col-12 col-md-8 py-5 border-neon my-2 px-5" style="display: none;">   
+            <form class="row" action="index.html" method="post" id="miformulario" novalidate>
+                <h2 class="col-12 text-center">Datos Personales</h2>
+                <!--Email-->
+                <div class="col-12 py-2">
+                    <label class="form-label" for="email" >Email</label>
+                    <input type="email" class="form-control" id="email"  placeholder="nombre@gmail.com" required>
+                </div>
+                <!--Nombre y apellido-->
+                <div class="col-12 col-md-6 py-2">
+                    <label class="form-label" for="nombre">Nombre</label>
+                    <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+                </div>
+                <div class="col-12 col-md-6  py-2">
+                    <label class="form-label" for="apellido">Apellido</label>
+                    <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required> 
+                </div>
+                <!--Numero de DNI-->
+                <div class="col-12 col-md-6  py-2">
+                    <label class="form-label" for="dni">Número de DNI</label>
+                    <input class="form-control" type="text" id="dni" name="dni" required>
+                </div>
+                <!--Telefono-->
+                <div class="col-12 col-md-6  py-2">
+                    <label class="form-label" for="telefono">Teléfono</label>
+                    <input class="form-control" type="tel" id="telefono" name="telefono" required>
+                </div>
+                <!--Dirección-->
+                <div class="col-12 py-2">
+                    <label class="form-label" for="direccion">Dirección de envío</label>
+                    <input class="form-control" type="text" id="direccion" name="direccion" placeholder="Ej: Av del Libertador 1473, Buenos Aires" required>
+                </div>
+                <div class="col-12 col-md-6  py-2">
+                    <label class="form-label" for="dpto">Piso / Departamento</label>
+                    <input class="form-control" type="text" id="dpto" name="dpto" required>
+                </div>
+                <!--Fecha de envio-->
+                <div class="col-12 col-md-6  py-2">
+                    <label class="form-label" for="fecha">Fecha de envío</label>
+                    <input class="form-control" type="date" id="fecha" name="fecha" required>
+                </div>
+                <!--Informe de Pago-->
+
+                <h2 class="col-12 text-center py-3 text-white">Información de pago</h2>
+
+                <div class="col-12 col-md-6 py-2">
+                    <label class="form-label" for="tarjeta">Tarjeta</label>
+                    <select class="form-select" aria-label="Default select example" id="tarjeta">
+                        <option selected>Seleccione el tipo de tarjeta</option>
+                        <option value="1">Débito</option>
+                        <option value="2">Crédito</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6 py-2">
+                    <label class="form-label" for="nombreyapellido">Nombre y Apellido</label>
+                    <input class="form-control" type="text" name="nombreyapellido" id="nombreyapellido" required>
+                </div>
+
+                <div class="col-12 col-md-4 py-2">
+                    <label class="form-label" for="num_tarjeta">Número de la tarjeta</label>
+                    <input class="form-control" type="text" name="num_tarjeta" id="num_tarjeta" required>
+                </div>
+
+                <div class="col-12 col-md-4  py-2">
+                    <label class="form-label" for="mes">MM</label>
+                    <select class="form-select" aria-label="Default select example" id="mes">
+                        <option selected>Mes de vencimento</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+
+                <div class="col-12 col-md-4  py-2">
+                    <label class="form-label" for="año">AA</label>
+                    <select class="form-select" aria-label="Default select example" id="ano">
+                        <option selected>Año de vencimento</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                        <option value="2032">2032</option>
+                        <option value="2033">2033</option>
+                        <option value="2034">2034</option>
+                        <option value="2035">2035</option>
+                    </select>
+                </div>
+
+
+                <div class="col-12 col-md-4 py-2">
+                    <label class="form-label" for="cuotas">Cuotas</label>
+                    <select class="form-select" aria-label="Default select example" id="cuotas">
+                        <option selected>Seleccione la cantidad de cuotas</option>
+                        <option value="1">1 cuota</option>
+                        <option value="2">3 cuotas</option>
+                        <option value="3">6 cuotas</option>
+                    </select>
+                </div>
+
+                <div class="col-12 col-md-4 py-2">
+                    <label class="form-label" for="codigo">Código de seguridad</label>
+                    <input class="form-control" type="text" name="codigo" id="codigo" required>
+                </div>
+
+                <div class="col-12 col-md-4 py-2">
+                    <label class="form-label" for="nombreyapellido">DNI del comprador</label>
+                    <input class="form-control" type="text" name="dnicomprador" id="dnicomprador" required>
+                </div>
+                <div class="text-center mt-4 py-2 d-flex flex-row justify-content-between">
+                    <div class="d-flex flex-column mt">
+                        <p>Total a pagar:</p>
+                        <span id="totalPagar"></span>
+                    </div>
+                    <button type="submit" class="btn-form btn btn-lg btn-purple" id="comprar">COMPRAR</button>
+                </div>
+                <div id="cuotasDetalle" class="text-center mt-2" style="display: none;"></div>
+            </form>
+
+        </div> 
+    </section> 
+
+    <!--FOOTER-->
+
+    <footer class="bg-info bg-gradient bg-opacity-75">
+        <div class="footer-container w-100">
+            <!--Seccion de informaciones personales-->
+            <ul class="personal-info">
+                <li class="fs-1 fw-bold">Parcial de Programación 1</li>
+                <li>Contreras, Nairut,</li>
+                <li>Gesualdi, Afonso</li>
+                
+            </ul>
+
+            <!--Seccion de redes sociales-->
+            <ul class="social-media">
+                <li><a href="https://github.com/gesualdiafonso/parcial-2-p1.git" target="_blank" title="GitHub"><i class="bi bi-github"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+        <!--FIN FOOTER-->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="js/alerts.js"></script>
+        <script src="js/productos.js"></script>
+        <script src="js/detalles.js"></script>
+        <script src="js/publicidad.js"></script>
+        <script src="js/carrito.js"></script>
+        <script src="js/miniCarrito.js"></script>
+        <script src="js/visibility.js"></script>
+        <script src="js/formulario.js"></script>      
+</body>
+</html>
