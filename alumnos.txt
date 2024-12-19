@@ -6,3 +6,9 @@ Gesualdi, Afonso
 2° Cuatrimestre, comision 2 AV, turno Noche,
 Programación 1 
 Profesor: Fabrizio Carlassara
+
+link de acceso repo:
+https://github.com/gesualdiafonso/p1-final.git
+
+link acceso a github pages:
+https://gesualdiafonso.github.io/p1-final/
