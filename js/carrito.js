@@ -361,7 +361,7 @@ function clearCart() {
 // Función de checkout
 function checkout() {
     if (Object.keys(carrito).length > 0) {
-        showAlert("Vamos direccionar para un formulario para que completes y efectúe la compra!")
+        showAlert("Complete el formulario para finalizar su compra")
         mostrarFormulario();
         closeCarrito();
     } else {
